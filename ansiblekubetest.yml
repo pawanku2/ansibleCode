@@ -1,0 +1,9 @@
+---
+- name: Create pods using deployment 
+  hosts: localhost 
+  become: true
+  #user: pawanazurevm
+ 
+  tasks: 
+  - name: create a deployment
+    command: kubectl apply -f /root/samplekube/firstpod.yml  
